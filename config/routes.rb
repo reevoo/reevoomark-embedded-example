@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/customer_experience' => 'application#customer_experience'
   get '/conversations' => 'application#conversations'
   get '/old_product_reviews' => 'application#old_product_reviews'
+  get '/old_customer_experience' => 'application#old_customer_experience'
+  get '/old_conversations' => 'application#old_conversations'
 end

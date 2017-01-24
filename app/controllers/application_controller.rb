@@ -17,7 +17,15 @@ class ApplicationController < ActionController::Base
   end
 
   def old_product_reviews
-    @reevoo_reviews = $reevoomark_client.fetch(@trkref, @sku)
+    @response = $reevoomark_embedable_reviews.fetch(@trkref, @sku)
+  end
+
+  def old_customer_experience
+    @response = $reevoomark_embeddable_customer_experience_reviews.fetch(@trkref, @sku)
+  end
+
+  def old_conversations
+    @response = $reevoomark_embeddable_conversations.fetch(@trkref, @sku)
   end
 
   private
