@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get '/old_product_reviews' => 'application#old_product_reviews'
   get '/old_customer_experience' => 'application#old_customer_experience'
   get '/old_conversations' => 'application#old_conversations'
+  get '/badges' => 'application#badges'
 end

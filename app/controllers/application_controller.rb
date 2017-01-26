@@ -16,6 +16,9 @@ class ApplicationController < ActionController::Base
   def customer_experience
   end
 
+  def badges
+  end
+
   def old_product_reviews
     @response = $reevoomark_embedable_reviews.fetch(@trkref, @sku)
   end
