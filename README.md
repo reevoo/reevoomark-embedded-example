@@ -11,11 +11,11 @@ rbenv install
 ```
 
 ```bash
-bunde install
+bundle install
 ```
 
 ```bash
-be rails s
+bundle exec rails s -p 3000
 ```
 
 ```bash
