@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/' => 'application#index'
   get '/product_reviews' => 'application#product_reviews'
   get '/customer_experience' => 'application#customer_experience'
+  get '/customer_experience_v1' => 'application#customer_experience_v1'
   get '/conversations' => 'application#conversations'
   get '/old_product_reviews' => 'application#old_product_reviews'
   get '/old_customer_experience' => 'application#old_customer_experience'

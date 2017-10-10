@@ -16,6 +16,9 @@ class ApplicationController < ActionController::Base
   def customer_experience
   end
 
+  def customer_experience_v1
+  end
+
   def badges
   end
 
@@ -34,7 +37,9 @@ class ApplicationController < ActionController::Base
   private
 
   def load_variables
-    @trkref = 'MAZ'
-    @sku = 'series:mazda3'
+    @domain  =  params[:domain] || 'http://localhost:3000'
+    @trkref = params[:trkref]
+    @sku = params[:sku]
+    @page = params[:page]
   end
 end
