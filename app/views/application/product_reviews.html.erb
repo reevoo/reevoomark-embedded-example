@@ -1,2 +1,9 @@
-<reevoo-embedded-product-reviews page="<%= @page %>" trkref="<%= @trkref %>" sku="<%= @sku %>" per-page="10"></reevoo-embedded-product-reviews>
-<h2>LOADING</h2>
+<style>
+  div#p-review {
+    max-width: 1024px;
+    margin: auto;
+  }
+</style>
+<div id="p-review">
+  <reevoo-embedded-product-reviews page="<%= @page %>" trkref="<%= @trkref %>" sku="<%= @sku %>" per-page="8"></reevoo-embedded-product-reviews>
+</div>
