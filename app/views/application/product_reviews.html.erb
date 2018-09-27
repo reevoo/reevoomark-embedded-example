@@ -5,5 +5,30 @@
   }
 </style>
 <div id="p-review">
-  <reevoo-embedded-product-reviews page="<%= @page %>" trkref="<%= @trkref %>" sku="<%= @sku %>" per-page="8"></reevoo-embedded-product-reviews>
+  <%- if @manufacturer != nil -%>
+
+    <reevoo-embedded-product-reviews
+          manufacturer="<%= @manufacturer %>"
+          model="<%= @model %>"
+          model-year="<%= @model_year %>"
+          <%= @variant.present? ? "model-variant=\"#{@variant }\"" : "" %>
+          <%= @stylesheet_version.present? ? "stylesheet_version=#{@stylesheet_version }" : "" %>
+          per_page="<%= @per_page %>"
+          trkref="<%= @trkref %>"
+          used="<%= @used %>"
+          body_type="sedan"
+          page="<%= @page %>"
+          per-page="8"></reevoo-embedded-product-reviews>
+
+
+
+  <%- else -%>
+    <reevoo-embedded-product-reviews
+          page="<%= @page %>"
+          trkref="<%= @trkref %>"
+          <%= @stylesheet_version.present? ? "stylesheet_version=#{@stylesheet_version }" : "" %>
+          sku="<%= @sku %>"
+          per_page="<%= @per_page %>"></reevoo-embedded-product-reviews>
+
+  <%- end -%>
 </div>

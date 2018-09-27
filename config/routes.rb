@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/' => 'application#index'
   get '/product_reviews' => 'application#product_reviews'
+  get '/tabbed_embedded' => 'application#tabbed_embedded'
   get '/customer_experience' => 'application#customer_experience'
   get '/customer_experience_v1' => 'application#customer_experience_v1'
   get '/conversations' => 'application#conversations'

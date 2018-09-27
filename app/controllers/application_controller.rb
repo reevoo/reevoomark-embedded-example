@@ -6,8 +6,10 @@ class ApplicationController < ActionController::Base
   def index
   end
 
-  def product_reviews
+  def tabbed_embedded
+  end
 
+  def product_reviews
   end
 
   def conversations
@@ -37,9 +39,19 @@ class ApplicationController < ActionController::Base
   private
 
   def load_variables
-    @domain  =  params[:domain] || 'http://localhost:3000'
+    @domain  =  params[:domain] || 'http://0.0.0.0:3000'
     @trkref = params[:trkref]
     @sku = params[:sku]
-    @page = params[:page]
+    @page = params[:page] || 1
+
+    @manufacturer = params[:manufacturer]
+    @model = params[:model]
+    @model_year = params[:model_year]
+    @variant = params[:variant]
+    @per_page = params[:per_page] || 8
+    @trkref = params[:trkref]
+    @used = params[:used]
+    @tab = params[:tab] || ''
+    @stylesheet_version = params[:stylesheet_version] || '1.5'
   end
 end
