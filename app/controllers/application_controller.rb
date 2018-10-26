@@ -39,10 +39,11 @@ class ApplicationController < ActionController::Base
   private
 
   def load_variables
-    @domain  =  params[:domain] || 'http://0.0.0.0:3000'
+    @domain  =  params[:domain] || 'http://0.0.0.0:3001'
     @trkref = params[:trkref]
     @sku = params[:sku]
     @page = params[:page] || 1
+
 
     @manufacturer = params[:manufacturer]
     @model = params[:model]
@@ -53,5 +54,6 @@ class ApplicationController < ActionController::Base
     @used = params[:used]
     @tab = params[:tab] || ''
     @stylesheet_version = params[:stylesheet_version] || '1.5'
+    @locale = params[:locale] || 'en-GB'
   end
 end
